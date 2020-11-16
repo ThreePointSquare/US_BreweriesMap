@@ -32,10 +32,7 @@ beer_df = beer_df.drop(a).reset_index()
 for i, zipcode in enumerate(beer_df['postalCode']): 
     try:
         if (pd.isnull(zipcode) != True):
-            if(len(zipcode) <= 5):
-                states.append(zip2state[int(zipcode)])
-            else:
-                states.append(zip2state[int(zipcode)])
+            states.append(zip2state[int(zipcode)])
                 
         else: 
             states.append(beer_df['province'][i])
